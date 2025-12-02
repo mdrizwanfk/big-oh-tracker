@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Big Oh - A Timer/Stopwatch for CS50",
+  "name": "Big Oh! - A Timer/Stopwatch for CS50",
   "icons": {
     "16": "flapping-duck-16.png",
     "24": "flapping-duck-24.png",
@@ -15,11 +15,20 @@
     "service_worker": "service-worker.js",
     "type": "module"
   },
-  "action": {},
+  "action": {
+    "default_popup": "index.html"
+  },
   "permissions": [
-    "scripting"
+    "scripting",
+    "storage"
   ],
   "host_permissions": [
     "https://cs50.harvard.edu/x/psets/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://cs50.harvard.edu/x/psets/*"],
+      "js": ["content.js"]
+    }
   ]
 }
