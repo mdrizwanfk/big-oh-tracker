@@ -2,7 +2,12 @@
   "manifest_version": 3,
   "name": "Big Oh - A Timer/Stopwatch for CS50",
   "icons": {
-    "32": "icon32.png"
+    "16": "flapping-duck-16.png",
+    "24": "flapping-duck-24.png",
+    "32": "flapping-duck-32.png",
+    "48": "flapping-duck-48.png",
+    "64": "flapping-duck-64.png",
+    "128": "flapping-duck-128.png"
   },
   "version": "1.0.0",
   "description": "A timer/stopwatch for CS50",
