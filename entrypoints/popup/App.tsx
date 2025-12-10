@@ -1,10 +1,7 @@
-import { useState } from 'react'
 import './App.css'
 import logo from '../../assets/flying-bird.png'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <img src={logo} className="logo" alt="Big Oh!" />
