@@ -28,8 +28,13 @@ const Stopwatch = () => {
 
   // Get storage key based on current URL
   const getStorageKey = () => {
-    // TODO: create a key that is not url but just made of week number and problem name psets/[9/birthdays] just this part.
-    return `stopwatch_${window.location.href}`
+    const { pathname } = window.location
+    const pathNameChunks = pathname.split('/').filter((v) => v != '')
+    const key = pathNameChunks
+      .slice(pathNameChunks.indexOf('psets') + 1)
+      .join('-')
+
+    return `stopwatch_${key}`
   }
 
   // Load state from browser.storage
